@@ -79,4 +79,48 @@ body {
   }
   
 
+
+
+
+   .down{
+    /* margin: 10px; */
+    /* padding: 5px 15px; */
+    align-items: center;
+    /* margin-top: 30px; */
+    border: 1px solid black;
+  }
+  .downbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .down:hover{
+   background-color:  #D2042D;
+   color: white;
+  }    
+
+  .form2{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+h2{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.alert{
+  width: 50%;
+  background: rgb(0, 255, 106);
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  display: none;
+
+
+}
   
