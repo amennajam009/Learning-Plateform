@@ -29,11 +29,16 @@ body {
     color: white;
   }
   p{
-    color: rgb(235, 224, 224);
-    font-family: 'Phudu', cursive;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 21px;
   }
   .btn{
     background-color: #FF5733 ;
+  }
+  .hi{
+    float:right;
+    margin-left: 10px;
   }
   .second{
     float:right;
@@ -44,7 +49,7 @@ body {
     align-items: center;
     color: white;
     margin-bottom: 5px;
-    font-family: 'Phudu', cursive;
+    font-family: 'Oswald', sans-serif;
    
   }
   h4{
@@ -53,7 +58,7 @@ body {
     align-items: center;
     color: white;
     margin-bottom: 5px;
-    font-family: 'Phudu', cursive;
+    font-family: 'Oswald', sans-serif;
   }
   h2{
     display: flex;
@@ -61,10 +66,17 @@ body {
     align-items: center;
     color: white;
     margin-bottom: 5px;
-    font-family: 'Phudu', cursive;
+    font-family: 'Oswald', sans-serif;
 
   }
+  .sub{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* background: #bdb042; */
+   /* background: #272e48; */
 
-
+  }
+  
 
   
