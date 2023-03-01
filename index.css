@@ -1,5 +1,7 @@
+
 body {
     padding: 40px 0;
+ 
   }
   
   .grid {
@@ -10,7 +12,8 @@ body {
   }
   
   .grid > article {
-    border: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 1px solid #454545;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
   }
   
@@ -21,7 +24,46 @@ body {
   .grid .text {
     padding: 20px;
   }
-  
+
+  h3{
+    color: white;
+  }
+  p{
+    color: rgb(235, 224, 224);
+    font-family: 'Phudu', cursive;
+  }
+  .btn{
+    background-color: #FF5733 ;
+  }
+  .second{
+    float:right;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Phudu', cursive;
+   
+  }
+  h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Phudu', cursive;
+  }
+  h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Phudu', cursive;
+
+  }
 
 
 
