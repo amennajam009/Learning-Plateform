@@ -1,5 +1,10 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document);
+// const submitButton = document.getElementById('submit-button');
+// submitButton.addEventListener('click', function(event) {
+//     CalculateThePrice();
+//     event.preventDefault(); // prevent the form from submitting
+//   })
 let Value1=0;
 let Value2=0;
 let Value3=0;
@@ -29,15 +34,19 @@ let GetButton1value = () => {
 }
 let del1value = () => {
     try {
+        
         let GetInput = $('.one');
         Quantity1 = Math.max(Quantity1 - 1, 1);
         Value1 -= parseInt($('.value1').dataset.value);
         Value1 = Math.max(Value1, 0); // make sure Value1 doesn't go below zero
         GetInput.placeholder = `${Value1} x ${Quantity1}`;
+        CalculateThePrice();
+      
     } 
     catch (error) {
         console.log(error.message)
     }
+  
 }
 
 // card two function
@@ -61,6 +70,7 @@ let del2value = () =>{
         Value2 -= parseInt($('.value2').dataset.value);
         Value2 = Math.max(Value2, 0); // make sure Value1 doesn't go below zero
         GetInput.placeholder = `${Value2} x ${Quantity2}`;
+        CalculateThePrice();
     } 
     catch (error) {
         console.log(error.message)
@@ -86,6 +96,7 @@ let del3value = () =>{
         Value3 -= parseInt($('.value3').dataset.value);
         Value3 = Math.max(Value3, 0); // make sure Value1 doesn't go below zero
         GetInput.placeholder = `${Value3} x ${Quantity3}`;
+        CalculateThePrice();
     } 
     catch (error) {
         console.log(error.message)
@@ -111,6 +122,7 @@ let del4value = () =>{
         Value4 -= parseInt($('.value4').dataset.value);
         Value4 = Math.max(Value4, 0); // make sure Value1 doesn't go below zero
         GetInput.placeholder = `${Value4} x ${Quantity4}`;
+        CalculateThePrice();
     } 
     catch (error) {
         console.log(error.message)
@@ -135,6 +147,7 @@ let del5value = () =>{
         Value5 -= parseInt($('.value5').dataset.value);
         Value5 = Math.max(Value5, 0); // make sure Value1 doesn't go below zero
         GetInput.placeholder = `${Value5} x ${Quantity5}`;
+        CalculateThePrice();
     } 
     catch (error) {
         console.log(error.message)
@@ -152,6 +165,7 @@ let sixthbuttonvalue = () =>{
     } catch (error) {
         console.log(message);
     }
+    
 }
 let del6value = () =>{
     try {
@@ -160,6 +174,7 @@ let del6value = () =>{
         Value6 -= parseInt($('.value6').dataset.value);
         Value6 = Math.max(Value6, 0); // make sure Value1 doesn't go below zero
         GetInput.placeholder = `${Value6} x ${Quantity6}`;
+        CalculateThePrice();
     } 
     catch (error) {
         console.log(error.message)
@@ -173,6 +188,7 @@ let del6value = () =>{
 
 
 let CalculateThePrice = () => {
+    Result = 0;
     try {
         console.log(Value1);
         console.log(Value2);
@@ -183,6 +199,12 @@ let CalculateThePrice = () => {
         if (Value1 !== 0) {
             Result = Result + Value1
         }
+    
+
+        // if (Value1 !==0){
+        //     Result -= Value1
+        // }
+        
         if (Value2 !== 0) {
             Result = Result + Value2
         }
@@ -198,6 +220,8 @@ let CalculateThePrice = () => {
         if (Value6 !==0) {
             Result = Result + Value6
         }
+        
+    
         let ResultDiv = $('.Result');
         ResultDiv.innerHTML = `
         <style>
@@ -476,6 +500,7 @@ let CalculateThePrice = () => {
     </div>
 </div>
         `
+     
 
     } catch (error) {
         console.log(error.message)
