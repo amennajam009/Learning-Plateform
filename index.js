@@ -1,10 +1,6 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document);
-// const submitButton = document.getElementById('submit-button');
-// submitButton.addEventListener('click', function(event) {
-//     CalculateThePrice();
-//     event.preventDefault(); // prevent the form from submitting
-//   })
+
 let Value1=0;
 let Value2=0;
 let Value3=0;
