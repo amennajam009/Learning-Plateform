@@ -1,20 +1,20 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document);
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const Email = document.getElementById('Email');
-const reading = document.getElementById('reading');
-const feedback = document.getElementById('feedback');
-const submitBtn = document.getElementById('submit-btn');
-const alertBox = document.querySelector(".alert");
+// const firstname = document.getElementById('firstname');
+// const lastname = document.getElementById('lastname');
+// const Email = document.getElementById('Email');
+// const reading = document.getElementById('reading');
+// const feedback = document.getElementById('feedback');
+// const submitBtn = document.getElementById('submit-btn');
+// const alertBox = document.querySelector(".alert");
 
-function generateHello() {
-  if (firstname.value !== '' && lastname.value !== '' && Email.value !=='' && reading.value !==''  && feedback.value !=='') {
-    alert('Hello!');
-  }
-}
-  submitBtn.addEventListener('click', generateHello);
-;
+// function generateHello() {
+//   if (firstname.value !== '' && lastname.value !== '' && Email.value !=='' && reading.value !==''  && feedback.value !=='') {
+//     alert('Hello!');
+//   }
+// }
+//   submitBtn.addEventListener('click', generateHello);
+// ;
 let Value1=0;
 let Value2=0;
 let Value3=0;

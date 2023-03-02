@@ -14,13 +14,15 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@300&family=Poppins:ital,wght@0,500;1,400&display=swap"
     rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="pic/Book _ Education Logo Design.png">
 </head>
 
 <body style="background-color:#292727;">
-  <div class="alert">THANK YOU...!!!</div>
-  <h1  class="mt-3">Welcome</h1>
-  <h2 class="mt-3">CHOOSE YOUR BOOK</h2>
-  <h4 class="mt-3">“Reality doesn’t always give us the life that we desire, but we can always find what we desire between the pages
+  <!-- <div class="alert">THANK YOU...!!!</div> -->
+  <h1 class="mt-3">Welcome</h1>
+  <h2 class="mt-3 h2-container" style="background-color: #2e3d5f;">CHOOSE YOUR BOOK</h2>
+  <h4 class="mt-4">“Reality doesn’t always give us the life that we desire, but we can always find what we desire
+    between the pages
     of books.”</h4>
   <form onsubmit="CalculateThePrice(); return false">
     <div class="container mt-5">
@@ -145,26 +147,26 @@
       </main>
     </div>
 
-  <!-- submit function -->
+    <!-- submit function -->
     <div class="row mt-5 sub">
       <button class="w-50 btn  sub" type="submit" style="background-color: #2e3d5f; color: white;">Total Amount</button>
     </div>
+    <!-- </form> -->
+    <div class="Result"></div>
   </form>
-  <div class="Result"></div>
 
-
-  <!-- your info -->
-  <h2 class="mt-5 p-3">Your FeedBack:</h2>
-  <form class="form2" onsubmit="createcard() ;return  false">
+   <!-- your info -->
+  <h3 class="mt-5 p-3 form2">Your FeedBack:</h3>
+  <form  id="myForm" class="form2">
    <table cellpadding="11">
       <tr>
         <td><label for="inputPassword5" class="form-label" style="color: white;"> First Name</label>
-          <input type="text" id="inputPassword5 firstname" class="form-control First"
+          <input type="text" id="firstname" class="form-control First"
             aria-describedby="passwordHelpBlock" required>
         </td>
 
         <td><label for="inputPassword5" class="form-label" style="color: white;">Last Name</label>
-          <input type="text" id="inputPassword5" class="form-control lastname" aria-describedby="passwordHelpBlock"
+          <input type="text" id="lastname"  class="form-control " aria-describedby="passwordHelpBlock"
             required>
         </td>
 
@@ -175,7 +177,7 @@
 
       <tr>
         <td><label for="inputPassword5" class="form-label" style="color: white;">Email</label>
-          <input type="email" id="inputPassword5 email" class="form-control Email" aria-describedby="passwordHelpBlock"
+          <input type="email" id="email" class="form-control Email" aria-describedby="passwordHelpBlock"
             required>
         </td>
 
@@ -194,12 +196,103 @@
 
       <tr>
         <td><label for="inputPassword5" class="form-label" style="color: white;">Do You Love Reading Why?</label>
-          <input type="text" id="inputPassword5 reading" class="form-control Contact Seat w-100"
+          <input type="text" id="reading" class="form-control Contact Seat w-100"
             aria-describedby="passwordHelpBlock" placeholder="Why you love reading?" required>
         </td>
 
         <td><label for="inputPassword5" class="form-label" style="color: white;">Tell us About Your fav Book ;)</label>
-          <input type="text" id="inputPassword5 tellus" class="form-control Contact book"
+          <input type="text" id="tellus" class="form-control Contact book"
+            aria-describedby="passwordHelpBlock" placeholder="Your Fav Book" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="feedback"
+              style="height: 100px ; width: 300px;" required></textarea>
+            <label for="floatingTextarea2" style="color: white;">FeedBack</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn  w-100 " type="submit" id="submit-btn" style="background-color: #2e3d5f; color: white;"   >Submit</button>
+       
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    const form = document.querySelector('#myForm');
+    const firstname = document.querySelector('#firstname');
+    const lastname = document.querySelector('#lastname');
+    const email = document.querySelector('#email');
+    const reading = document.querySelector('#reading');
+    const tellus = document.querySelector('#tellus');
+    const feedback = document.querySelector('#feedback');
+
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (firstname.value !== '' && lastname.value !== ''  && email.value !== '' && reading.value !== '' && tellus.value !== '' && feedback.value !== '')
+       {
+        alert('Thank you for your FeedBack😄!');
+        form.reset();
+      } else {
+        alert('Please fill out all fields');
+      }
+    });
+  </script>
+  <!-- your info -->
+  <!-- <h2 class="mt-5 p-3">Your FeedBack:</h2>
+  <form  id="myForm">
+   <table cellpadding="11">
+      <tr>
+        <td><label for="inputPassword5" class="form-label" style="color: white;"> First Name</label>
+          <input type="text" id="firstname" class="form-control First"
+            aria-describedby="passwordHelpBlock" required>
+        </td>
+
+        <td><label for="inputPassword5" class="form-label" style="color: white;">Last Name</label>
+          <input type="text" id="lastname"  class="form-control " aria-describedby="passwordHelpBlock"
+            required>
+        </td>
+
+
+      </tr>
+
+      </tr>
+
+      <tr>
+        <td><label for="inputPassword5" class="form-label" style="color: white;">Email</label>
+          <input type="email" id="email" class="form-control Email" aria-describedby="passwordHelpBlock"
+            required>
+        </td>
+
+        <td><label for="inputPassword5" class="form-label mt-4" style="color: white;"> Your Age:</label>
+          <select class="form-select" aria-label="Default select example" required>
+            <option selected id="age">5-10</option>
+            <option value="1" id="age">11-17</option>
+            <option value="2" id="age">18-28</option>
+            <option value="3" id="age">30-50</option>
+          </select>
+        </td>
+      </tr>
+      </tr>
+
+
+
+      <tr>
+        <td><label for="inputPassword5" class="form-label" style="color: white;">Do You Love Reading Why?</label>
+          <input type="text" id="reading" class="form-control Contact Seat w-100"
+            aria-describedby="passwordHelpBlock" placeholder="Why you love reading?" required>
+        </td>
+
+        <td><label for="inputPassword5" class="form-label" style="color: white;">Tell us About Your fav Book ;)</label>
+          <input type="text" id="tellus" class="form-control Contact book"
             aria-describedby="passwordHelpBlock" placeholder="Your Fav Book" required>
         </td>
       </tr>
@@ -220,9 +313,9 @@
         </td>
       </tr>
     </table>
-  </form>
+  </form> -->
 
- 
+
   <script src="https://kit.fontawesome.com/032176dfd7.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
