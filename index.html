@@ -23,7 +23,7 @@
   <h4 class="mt-4">“Reality doesn’t always give us the life that we desire, but we can always find what we desire
     between the pages
     of books.”</h4>
-  <form onsubmit="CalculateThePrice(); return false">
+  <form onsubmit="CalculateThePrice(); return false" >
     <div class="container mt-5">
       <main class="grid">
         <!-- card 1 -->
@@ -41,7 +41,7 @@
                 Overview</button></a><button class="hi btn  " onclick="del1value()"
               style="background-color: #2e3d5f; color: white;"><i class="fa-solid fa-delete-left"></i></button><button
               class="btn second   ms-4 value1" type="submit" data-value="200" onclick="GetButton1value()"
-              style="background-color: #2e3d5f; color: white;">200 x 1 </button>
+              style="background-color: #2e3d5f; color: white;" id="value1">200 x 1 </button>
             <input type="text" name="" id="" class="form-control one mt-3" placeholder="" readonly>
 
           </div>
@@ -148,7 +148,7 @@
 
     <!-- submit function -->
     <div class="row mt-5 sub">
-      <button class="w-50 btn  sub" type="submit" style="background-color: #2e3d5f; color: white;">Total Amount</button>
+      <button class="w-50 btn "  style="background-color: #2e3d5f; color: white;"  >Total Amount</button>
     </div>
     <div class="Result"></div>
   </form>
@@ -210,7 +210,7 @@
       </tr>
     </table>
   </form>
-  <script>
+  <!-- <script>
     const form = document.querySelector('#myForm');
     const firstname = document.querySelector('#firstname');
     const lastname = document.querySelector('#lastname');
@@ -230,7 +230,7 @@
         alert('Please fill out all fields');
       }
     });
-  </script>
+  </script> -->
   <script src="https://kit.fontawesome.com/032176dfd7.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
